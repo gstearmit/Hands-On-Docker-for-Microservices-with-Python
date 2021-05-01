@@ -3,7 +3,7 @@
 # It will install compilers and other packages, that won't be carried
 # over to the runtime image
 ########
-FROM alpine:3.9 AS compile-image
+FROM alpine:3.12 AS compile-image
 
 # Add requirements for python and pip
 RUN apk add --update python3
@@ -29,7 +29,7 @@ RUN pip3 install -r /opt/requirements.txt
 ########
 # This image is the runtime, will copy the dependencies from the other
 ########
-FROM alpine:3.9 AS runtime-image
+FROM alpine:3.12 AS runtime-image
 
 RUN mkdir -p /opt/code
 
