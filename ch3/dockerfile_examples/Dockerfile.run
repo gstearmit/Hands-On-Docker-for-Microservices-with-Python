@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine:3
 
 RUN mkdir -p /opt/
 COPY example.txt /opt/example.txt
