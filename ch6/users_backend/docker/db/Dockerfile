@@ -1,6 +1,6 @@
 # This Dockerfile is for localdev purposes only, so it won't be
 # optimised for size
-FROM alpine:3.9
+FROM alpine:latest
 
 # Add the proper env variables for init the db
 ARG POSTGRES_DB
